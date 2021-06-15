@@ -11,4 +11,8 @@ describe('app routes', () => {
     expect(res.text).toEqual('oh hai Mark');
     expect(res.status).toEqual(200);
   });
+  it('GET request to /red responds with html with h1 and word red', async() => {
+    const res = await request(app).get('/red');
+    expect(res.text).toEqual('<h1>red<h1>');
+  });
 });
