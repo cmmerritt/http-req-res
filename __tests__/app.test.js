@@ -10,6 +10,7 @@ describe('app routes', () => {
     const res = await request(app).post('/echo').send('oh hai Mark');
     expect(res.text).toEqual('oh hai Mark');
     expect(res.status).toEqual(200);
+    expect(res.type).toEqual('text/plain');
   });
   it('GET request to /red responds with html with h1 and word red', async() => {
     const res = await request(app).get('/red');
