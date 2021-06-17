@@ -24,4 +24,8 @@ describe('app routes', () => {
     const res = await request(app).get('/blue');
     expect(res.text).toEqual('<h1>blue</h1>');
   });
+  it('GET request to /index.html responds with html contents of file', async() => {
+    const res = await request(app).get('/public/index.html');
+    expect(res.text).toEqual('<h1>welcome to the index</h1>');
+  });
 });
