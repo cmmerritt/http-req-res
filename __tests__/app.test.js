@@ -28,4 +28,8 @@ describe('app routes', () => {
     const res = await request(app).get('/index.html');
     expect(res.text).toEqual('<h1>welcome to the index</h1>');
   });
+  it('GET request to /indxe.html responds with error', async() => {
+    const res = await request(app).get('/indxe.html');
+    expect(res.text).toEqual('Not Found');
+  });
 });
