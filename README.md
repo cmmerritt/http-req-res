@@ -2,6 +2,10 @@
 
 - create server in `server.js` - DONE
 - at `http://localhost:7890/index.html` server goes into `public` directory, finds `index.html`, reads `index.html`, and sends contents as a response
+  TESTS:
+  1. make sure function works when index.html is there
+  2. make sure it returns an error when index.html is not in public or public doesn't exist
+  THEN:
   1. Request will be a GET to index.html??
   2. use parseRequest function to parse user's request
   3. use fs to go into `public` directory and find `index.html` 
